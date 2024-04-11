@@ -1,0 +1,203 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Datametrics.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="q5xFgiaUC8EN4XXCDE91Cqqk1QlvEpArZsROfTm6PYI" />
+
+<!--Bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!--Fontawesome icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--AOS-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!--Fancybox-->
+<link href="Content/js/jquery.fancybox.min.css" rel="stylesheet" />
+<script src="Content/js/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-421CJNC1YH"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-421CJNC1YH');
+</script>
+
+<script>
+    window.onload = function () {
+        AOS.init();
+    }
+</script>
+
+
+
+    <link href="Content/css/StylesInfactMetrics.css" rel="stylesheet" />
+    <link href="Imagenes/InFact-icono-24x24.ico" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        .e-mail {
+            color: white;
+        }
+
+        .e-mail:hover {
+            color: blue;
+        }
+        .e-mailCol {
+            color: #181848;
+            text-decoration: none;
+        }
+
+        .e-mailCol:hover {
+            color: blue;
+        }
+    </style>
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="jm-loadingpage"></div>
+    
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+        </asp:ScriptManager>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm"
+                style="height: 100px; width: 100%; border-bottom: #181848 5px solid;">
+                <div class="container" style="background-color: white; border-radius: 5px;">
+                    <a class="navbar-brand" href="/">
+                        <img src="Imagenes/InFact-MetrycsLogo.jpg" style="height: 5rem;" alt="Datametrics Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto ">
+                            <li class="nav-item menu">
+                                <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="/">Observatorio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 text-uppercase" href="Reportes.aspx">Reportes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 text-uppercase" href="Servicios.aspx">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 text-uppercase" href="DataAcademy.aspx">Data Academy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 text-uppercase" href="RepoImagenes.aspx">Imágenes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 text-uppercase" href="Nosotros.aspx">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 text-uppercase" href="Contact.aspx">Apis</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto ">
+                            <li class="nav-item">
+                                <a class="cta-button" href="/#contactSection">Contáctanos!!</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <%--<p style="background-color: #181848; color: #ffffff; text-align: center; padding: 20px;">Para mayor información, consultas o sugerencias contáctanos al siguiente email: info@InFactMetrycs.somee.com</p>--%>
+                <p style="background-color: #181848; color: #ffffff; text-align: center; padding: 20px;">Para mayor información, consultas o sugerencias contáctanos al siguiente email: 
+                    <a class="e-mail" href="mailto:info@InFactMetrycs.somee.com">info@InFactMetrycs.somee.com</a> <br />
+                    &copy; <%: DateTime.Now.Year %> - Copyright, All rights Reserved | InFactMetrycs</p>
+            </footer>
+        </div>
+    </form>
+<script>
+    $(document).ready(function () {
+        $(".jm-loadingpage").fadeOut("slow");;
+    });
+    $(document).ready(function () {
+        $('[data-fancybox="gallery"]').fancybox({
+            Toolbar: {
+                display: {
+                    left: ["infobar"],
+                    middle: [],
+                    right: ["zoom", "slideShow", "download", "close"],
+                }
+            },
+            buttons: [],
+            afterShow: function (instance) {
+                // Eliminar todos los botones personalizados existentes
+                instance.$refs.toolbar.find('.fancybox-button--custom').remove();
+
+                // Crear botones personalizados
+                var customButtonsHtml = '<button data-fancybox-zoom class="fancybox-button fancybox-button--zoom fancybox-button--custom" title="Zoom"><i class="fas fa-search-plus"></i></button>';
+                customButtonsHtml += '<button data-fancybox-download class="fancybox-button fancybox-button--download fancybox-button--custom" title="Download"><i class="fas fa-download"></i></button>';
+                customButtonsHtml += '<button data-fancybox-close class="fancybox-button fancybox-button--close fancybox-button--custom" title="Close"><i class="fas fa-times"></i></button>';
+
+                // Agregar botones personalizados a la barra de herramientas
+                instance.$refs.toolbar.append(customButtonsHtml);
+
+                // Desvincular eventos de clic previamente unidos
+                instance.$refs.toolbar.off('click', '[data-fancybox-download]');
+
+                // Establecer eventos de clic solo para el botón de descarga
+                instance.$refs.toolbar.on('click', '[data-fancybox-download]', function (event) {
+                    event.preventDefault();
+                    var current = instance.current;
+                    downloadImage(current.src, current.opts.caption);
+                });
+            }
+        });
+    });
+    function downloadImage(imageUrl, caption) {
+        fetch(imageUrl)
+            .then(response => response.blob())
+            .then(blob => {
+                if (window.navigator && window.navigator.msSaveBlob) {
+                    // Internet Explorer
+                    window.navigator.msSaveBlob(blob, (caption ? caption.replace(/<[^>]*>/g, "") : 'Image') + '.jpg');
+                } else {
+                    // Otros navegadores
+                    var link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = (caption ? caption.replace(/<[^>]*>/g, "") : 'Image') + '.jpg';
+                    link.click();
+                }
+            })
+            .catch(error => console.error('Error downloading image:', error));
+    }
+</script>
+</body>
+</html>
