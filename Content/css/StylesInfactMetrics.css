@@ -1,0 +1,195 @@
+﻿.nav-link {
+    color: rgb(110, 110, 110);
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    color: #F0A818;
+}
+
+.nav-pills .nav-link.active {
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    border-bottom: solid 5px #181848;
+}
+
+.tab-content {
+    padding: 1.5rem;
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+}
+
+.search input {
+    height: 60px;
+    border: 2px solid #d6d4d4;
+}
+
+.search input:focus {
+    box-shadow: none;
+    border: 2px solid blue;
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+}
+
+.search button {
+    position: absolute;
+    height: 46px;
+}
+
+.menu-options {
+    color: rgba(24, 24, 72, 1);
+    font-weight: bold;
+}
+
+.cta-button {
+    text-decoration: none;
+    display: inline-flex;
+    padding: 13px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    background: #F0A818;
+    color: #181848;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.cta-button:hover {
+    text-decoration: none;
+    color: #181848;
+    scale: 1.2;
+}
+
+.pagination-outer {
+    text-align: center;
+}
+
+.pagination {
+    font-family: 'Quicksand', sans-serif;
+    display: inline-flex;
+    position: relative;
+}
+
+.pagination li a.page-link {
+    color: #fff;
+    background-color: #181848;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    height: 33px;
+    width: 33px;
+    padding: 0;
+    margin: 0 5px;
+    border: none;
+    box-shadow: 2px 2px rgba(0,0,0,0.2);
+    transition: all 0.5s ease 0s;
+}
+
+.pagination li a.page-link:hover,
+.pagination li a.page-link:focus,
+.pagination li.active a.page-link:hover,
+.pagination li.active a.page-link {
+    color: #fff;
+    background: #F0A818;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2), 4px 4px rgba(0,0,0,0.1);
+}
+
+.pagination li:first-child a.page-link,
+.pagination li:last-child a.page-link {
+    color: #F0A818;
+    background-color: #fff;
+    line-height: 27px;
+    border: 2px solid #F0A818;
+}
+
+@media only screen and (max-width: 480px) {
+    .pagination {
+        font-size: 0;
+        display: inline-block;
+    }
+
+    .pagination li {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0 10px;
+    }
+}
+
+main {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+
+.form-control:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 7px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+    margin-top: 1rem;
+    padding-inline-start: 0;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='yellow' class='bi bi-plus-circle' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+    transition: all 0.5s;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='yellow' class='bi bi-dash-circle' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+}
+
+@media only screen and (max-width: 600px) {
+    ul.nav-pills {
+        justify-content: unset !important;
+    }
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-text a {
+    color: white;
+    font-style: italic;
+}
+
+.banner-text a:hover {
+    color: blue;
+    font-style: italic;
+}
+
+.jm-loadingpage {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+    background: url(../../Imagenes/GIF-Data-4.gif) center no-repeat;
+    background-color: rgb(110 110 110 / 0,50);
+}
+
