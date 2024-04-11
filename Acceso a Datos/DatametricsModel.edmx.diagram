@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c15eae969b514b49b9965dd2bdc58258" Name="Diagram1">
+        <EntityTypeShape EntityType="datametricsModel.Banner" Width="1.5" PointX="0.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="datametricsModel.CategoriaReporte" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="datametricsModel.Colaborador" Width="1.5" PointX="2.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="datametricsModel.Color" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="datametricsModel.RepoImagen" Width="1.5" PointX="4.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="datametricsModel.Reporte" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="datametricsModel.FK_Reporte_CategoriaReporte" ManuallyRouted="false" />
+        <AssociationConnector Association="datametricsModel.FK_Reporte_Color" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="datametricsModel.CategoriaServicio" Width="1.5" PointX="0.75" PointY="10.375" />
+        <EntityTypeShape EntityType="datametricsModel.Servicio" Width="1.5" PointX="3" PointY="10" />
+        <EntityTypeShape EntityType="datametricsModel.ValorDeVariable" Width="1.5" PointX="7.5" PointY="10.375" />
+        <EntityTypeShape EntityType="datametricsModel.VariableDeCosto" Width="1.5" PointX="5.25" PointY="10.125" />
+        <AssociationConnector Association="datametricsModel.FK_Servicio_CategoriaServicio" />
+        <AssociationConnector Association="datametricsModel.FK_VariableDeCosto_Servicio" />
+        <AssociationConnector Association="datametricsModel.FK_ValorDeVariable_VariableDeCosto" />
+        <EntityTypeShape EntityType="datametricsModel.Dashboard" Width="1.5" PointX="6.25" PointY="6.375" />
+        <EntityTypeShape EntityType="datametricsModel.IconoCategoriServicio" Width="1.5" PointX="1.25" PointY="13.25" />
+        <AssociationConnector Association="datametricsModel.FK_IconoCategoriServicio_CategoriaServicio" />
+        <EntityTypeShape EntityType="datametricsModel.CategoriaCurso" Width="1.5" PointX="6.375" PointY="0.875" />
+        <EntityTypeShape EntityType="datametricsModel.Curso" Width="1.5" PointX="8.75" PointY="1" />
+        <AssociationConnector Association="datametricsModel.FK_Curso_CategoriaCurso" />
+        <EntityTypeShape EntityType="datametricsModel.HerramientaCurso" Width="1.5" PointX="11" PointY="1.75" />
+        <AssociationConnector Association="datametricsModel.FK_HerramientaCurso_Curso" />
+        <EntityTypeShape EntityType="datametricsModel.sysdiagrams" Width="1.5" PointX="8.375" PointY="5.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
